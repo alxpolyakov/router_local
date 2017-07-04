@@ -1,0 +1,16 @@
+{% extends "site_base.html" %}
+{% load bootstrap %}
+{% block body_base %}
+    <section>
+        <div class="container">
+            <form method="post">
+                {{ form|bootstrap_horizontal }}
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        {{ request.session.phone }}<br>
+            {{ request.session.code }}<br>
+
+        </div>
+    </section>
+{% endblock %}

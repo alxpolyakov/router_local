@@ -1,0 +1,9 @@
+{% extends "site_base.html" %}
+{% load bootstrap %}
+{% block body_base %}
+    <section>
+        <div class="container">
+            {{ form|bootstrap_horizontal }}
+        </div>
+    </section>
+{% endblock %}
